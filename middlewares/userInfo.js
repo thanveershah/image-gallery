@@ -11,11 +11,9 @@ const userInfo = (req, res, next) => {
       method: req.method,
    };
    userinfoLog.push(newData);
-   // console.log(userData);
-   console.log();
 
    fs.writeFile(
-      path.join(__dirname, "../LogUserInfo/userinfoLog.json"),
+      path.join(__dirname, "..", "LogUserInfo", "userinfoLog.json"),
       JSON.stringify(userinfoLog),
       (err) => {
          if (err) {
