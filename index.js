@@ -11,7 +11,7 @@ app.use(express.json());
 app.use(express.static("public"));
 
 //Application Level middleware
-app.use(userInfo);
+// app.use(userInfo);
 
 app.use("/api/image", ImageGalleryRoute);
 
