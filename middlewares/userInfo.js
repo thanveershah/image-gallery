@@ -12,19 +12,20 @@ const userInfo = (req, res, next) => {
    };
    userinfoLog.push(newData);
 
-   fs.writeFile(
-      path.join(__dirname, "..", "LogUserInfo", "userinfoLog.json"),
-      JSON.stringify(userinfoLog),
-      (err) => {
-         if (err) {
-            return res.status(400).json({
-               message: err,
-            });
-         }
-         console.log("User Data inserted");
-         next();
-      }
-   );
+   //    fs.writeFile(
+   //       path.join(__dirname, "..", "LogUserInfo", "userinfoLog.json"),
+   //       JSON.stringify(userinfoLog),
+   //       (err) => {
+   //          if (err) {
+   //             return res.status(400).json({
+   //                message: err,
+   //             });
+   //          }
+   //          console.log("User Data inserted");
+   //          next();
+   //       }
+   //    );
+   next();
 };
 
 module.exports = { userInfo };
