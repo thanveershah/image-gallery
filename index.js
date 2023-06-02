@@ -13,7 +13,7 @@ app.use(express.static("public"));
 //Application Level middleware
 app.use(userInfo);
 
-app.use("/", ImageGalleryRoute);
+app.use("/api/image", ImageGalleryRoute);
 
 app.use(errorHandle);
 
