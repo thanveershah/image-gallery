@@ -20,9 +20,8 @@ const userInfo = (req, res, next) => {
          });
       }
       console.log("User Data inserted");
+      next();
    });
-
-   next();
 };
 
 module.exports = { userInfo };
